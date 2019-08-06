@@ -1,4 +1,4 @@
-[![GoDoc](http://godoc.org/github.com/tleyden/open-ocr?status.png)](http://godoc.org/github.com/tleyden/open-ocr) 
+[![GoDoc](http://godoc.org/github.com/liufeiwu/open-ocr?status.png)](http://godoc.org/github.com/liufeiwu/open-ocr) 
 [![Join the chat at https://gitter.im/tleyden/open-ocr](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tleyden/open-ocr?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
@@ -14,25 +14,25 @@ The heavy lifting OCR work is handled by [Tesseract OCR](https://code.google.com
 
 * Scalable message passing architecture via RabbitMQ.
 * Platform independence via Docker containers.
-* [Kubernetes support](https://github.com/tleyden/open-ocr/tree/master/kubernetes): workers can run in a Kubernetes Replication Controller
+* [Kubernetes support](https://github.com/liufeiwu/open-ocr/tree/master/kubernetes): workers can run in a Kubernetes Replication Controller
 * Supports 31 languages in addition to English 
-* Ability to use an image pre-processing chain.  An example using [Stroke Width Transform](https://github.com/tleyden/open-ocr/wiki/Stroke-Width-Transform) is provided.
-* PDF support via a [PDF preprocessor](https://github.com/tleyden/open-ocr/pull/108) 
+* Ability to use an image pre-processing chain.  An example using [Stroke Width Transform](https://github.com/liufeiwu/open-ocr/wiki/Stroke-Width-Transform) is provided.
+* PDF support via a [PDF preprocessor](https://github.com/liufeiwu/open-ocr/pull/108) 
 * Pass arguments to Tesseract such as character whitelist and page segment mode.
 * [REST API docs](http://docs.openocr.apiary.io/)
-* A [Go REST client](http://github.com/tleyden/open-ocr-client) is available.
+* A [Go REST client](http://github.com/liufeiwu/open-ocr-client) is available.
 
 
 # Launching OpenOCR on a Docker PAAS
 
 OpenOCR can easily run on any PAAS that supports Docker containers.  Here are the instructions for a few that have already been tested:
 
-* [Launch on Google Container Engine GKE - Kubernetes](https://github.com/tleyden/open-ocr/wiki/Installation-on-Google-Container-Engine)
-* [Launch on AWS with CoreOS](https://github.com/tleyden/open-ocr/wiki/Installation-on-CoreOS-Fleet)
-* [Launch on Google Compute Engine](https://github.com/tleyden/open-ocr/wiki/Installation-on-Google-Compute-Engine)
-* [Launch on Azure Kubernetes Service](https://github.com/tleyden/open-ocr/wiki/Installation-on-Azure-Kubernetes-Service)
+* [Launch on Google Container Engine GKE - Kubernetes](https://github.com/liufeiwu/open-ocr/wiki/Installation-on-Google-Container-Engine)
+* [Launch on AWS with CoreOS](https://github.com/liufeiwu/open-ocr/wiki/Installation-on-CoreOS-Fleet)
+* [Launch on Google Compute Engine](https://github.com/liufeiwu/open-ocr/wiki/Installation-on-Google-Compute-Engine)
+* [Launch on Azure Kubernetes Service](https://github.com/liufeiwu/open-ocr/wiki/Installation-on-Azure-Kubernetes-Service)
 
-If your preferred PAAS isn't listed, please open a [Github issue](https://github.com/tleyden/open-ocr/issues) to request instructions.
+If your preferred PAAS isn't listed, please open a [Github issue](https://github.com/liufeiwu/open-ocr/issues) to request instructions.
 
 # Launching OpenOCR on Ubuntu 14.04
 
@@ -60,7 +60,7 @@ The ip address `10.0.2.15` will be used as the `RABBITMQ_HOST` env variable belo
 
  * [Install docker](https://docs.docker.com/installation/)
  * [Install docker-compose](https://docs.docker.com/compose/)
- * `git clone https://github.com/tleyden/open-ocr.git`
+ * `git clone https://github.com/liufeiwu/open-ocr.git`
  * `cd open-ocr/docker-compose`
  * Type ```./run.sh ``` (in case you don't have execute right type ```sudo chmod +x run.sh```
  * The runner will ask you if you want to delete the images (choose y or n for each)
@@ -178,18 +178,18 @@ $ curl -X POST -H "Content-Type: application/json" -d '{"img_base64":"<YOUR BASE
 
 ## The REST API also supports:
 
-* Uploading the image content via `multipart/related`, rather than passing an image URL.  (example client code provided in the [Go REST client](http://github.com/tleyden/open-ocr-client))
+* Uploading the image content via `multipart/related`, rather than passing an image URL.  (example client code provided in the [Go REST client](http://github.com/liufeiwu/open-ocr-client))
 * Tesseract config vars (eg, equivalent of -c arguments when using Tesseract via the command line) and Page Seg Mode 
-* Ability to use an image pre-processing chain, eg [Stroke Width Transform](https://github.com/tleyden/open-ocr/wiki/Stroke-Width-Transform).
+* Ability to use an image pre-processing chain, eg [Stroke Width Transform](https://github.com/liufeiwu/open-ocr/wiki/Stroke-Width-Transform).
 * Non-English languages
 
-See the [REST API docs](http://docs.openocr.apiary.io/) and the [Go REST client](http://github.com/tleyden/open-ocr-client) for details.
+See the [REST API docs](http://docs.openocr.apiary.io/) and the [Go REST client](http://github.com/liufeiwu/open-ocr-client) for details.
 
 # Client Libraries
 
 These client libraries make it easier to invoke the REST API:
 
-* **Go** [open-ocr-client](https://github.com/tleyden/open-ocr-client)
+* **Go** [open-ocr-client](https://github.com/liufeiwu/open-ocr-client)
 * **C#** [open-ocr-dotnet](https://github.com/alex-doe/open-ocr-dotnet)
 * **Java** [open-ocr-java](https://github.com/faLekGG/JavaOpenOCR)
 
@@ -204,7 +204,7 @@ The supplied `docs/upload-local-file.sh` provides an example of how to upload a 
 # Community
 
 * Follow [@OpenOCR](https://twitter.com/openocr) on Twitter
-* Checkout the [Github issue tracker](https://github.com/tleyden/open-ocr/issues)
+* Checkout the [Github issue tracker](https://github.com/liufeiwu/open-ocr/issues)
 
 
 # License
