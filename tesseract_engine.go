@@ -84,7 +84,7 @@ func (t TesseractEngineArgs) Export() []string {
 		result = append(result, keyValArg)
 	}
 	if t.pageSegMode != "" {
-		result = append(result, "-psm")
+		result = append(result, "--psm")
 		result = append(result, t.pageSegMode)
 	}
 	if t.lang != "" {
