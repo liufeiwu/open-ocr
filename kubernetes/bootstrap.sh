@@ -2,7 +2,7 @@
 #
 # bootstrap
 # automate the deployment of Open-OCR on a Kubernetes Cluster
-# based on https://github.com/tleyden/open-ocr/tree/master/kubernetes
+# based on https://github.com/liufeiwu/open-ocr/tree/master/kubernetes
 #
 # Copyright (c) 2019 diego casati <dcasati@dcasati.net>
 #
@@ -58,7 +58,7 @@ first_run() {
 
     if [ -d $LOCAL_REPO ]; then
         echo Clone OpenOCR repo
-        git clone https://github.com/tleyden/open-ocr.git
+        git clone https://github.com/liufeiwu/open-ocr.git
     fi
 }
 

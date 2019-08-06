@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/couchbaselabs/logg"
-	ocrworker "github.com/tleyden/open-ocr"
+	ocrworker "github.com/liufeiwu/open-ocr"
 )
 
 // This assumes that there is a rabbit mq running
@@ -36,7 +36,7 @@ func main() {
 	rabbitConfig := ocrworker.DefaultConfigFlagsOverride(flagFunc)
 
 	// inifinite loop, since sometimes worker <-> rabbitmq connection
-	// gets broken.  see https://github.com/tleyden/open-ocr/issues/4
+	// gets broken.  see https://github.com/liufeiwu/open-ocr/issues/4
 	for {
 		logg.LogTo("PREPROCESSOR_WORKER", "Creating new Preprocessor Worker")
 		preprocessorWorker, err := ocrworker.NewPreprocessorRpcWorker(

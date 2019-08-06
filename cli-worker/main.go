@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/couchbaselabs/logg"
-	"github.com/tleyden/open-ocr"
+	"github.com/liufeiwu/open-ocr"
 )
 
 // This assumes that there is a rabbit mq running
@@ -24,7 +24,7 @@ func main() {
 	rabbitConfig := ocrworker.DefaultConfigFlagsOverride(noOpFlagFunc)
 
 	// inifinite loop, since sometimes worker <-> rabbitmq connection
-	// gets broken.  see https://github.com/tleyden/open-ocr/issues/4
+	// gets broken.  see https://github.com/liufeiwu/open-ocr/issues/4
 	for {
 		logg.LogTo("OCR_WORKER", "Creating new OCR Worker")
 		ocrWorker, err := ocrworker.NewOcrRpcWorker(rabbitConfig)
