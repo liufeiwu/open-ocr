@@ -4,16 +4,16 @@ ENV GOPATH /opt/go
 
 # aliyun sources
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && \
-  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted" > /etc/apt/sources.list && \
-  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted" >> /etc/apt/sources.list && \
-  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic universe" >> /etc/apt/sources.list && \
-  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic-updates universe" >> /etc/apt/sources.list && \
-  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic multiverse" >> /etc/apt/sources.list && \
-  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic-updates multiverse" >> /etc/apt/sources.list && \
+  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse" > /etc/apt/sources.list && \
+  echo "deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse" >> /etc/apt/sources.list && \
+  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse" >> /etc/apt/sources.list && \
+  echo "deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse" >> /etc/apt/sources.list && \
+  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse" >> /etc/apt/sources.list && \
+  echo "deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse" >> /etc/apt/sources.list && \
+  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse" >> /etc/apt/sources.list && \
+  echo "deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse" >> /etc/apt/sources.list && \
   echo "deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse" >> /etc/apt/sources.list && \
-  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted" >> /etc/apt/sources.list && \
-  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic-security universe" >> /etc/apt/sources.list && \
-  echo "deb http://mirrors.aliyun.com/ubuntu/ bionic-security multiverse" >> /etc/apt/sources.list
+  echo "deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse" >> /etc/apt/sources.list
 
 # get the software proprerties common golang gcc and git
 # We need to install the software properties common before doing add-apt-repository, otherwise it will give an error: add-apt-repository: not found
